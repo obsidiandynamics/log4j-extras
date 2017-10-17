@@ -1,0 +1,7 @@
+rootProject.name = 'log4j-extras'
+
+include 'log4j-extras-json'
+project(':log4j-extras-json').projectDir = new File(settingsDir, 'json')
+
+include 'log4j-extras-splunk'
+project(':log4j-extras-splunk').projectDir = new File(settingsDir, 'splunk')
