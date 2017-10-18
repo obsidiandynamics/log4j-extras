@@ -5,7 +5,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group = 'com.obsidiandynamics.log4jextras'
-version = '0.1.0'
+version = '0.1.0-SNAPSHOT'
   
 def envUser = 'BINTRAY_USER'
 def envKey = 'BINTRAY_KEY'
@@ -71,6 +71,11 @@ allprojects {
 }
 
 subprojects {
+  dependencies {
+    compile project(':')
+    
+    testCompile project(':').sourceSets.test.output
+  }
 }
 
 task jacocoRootReport(type: JacocoReport) {

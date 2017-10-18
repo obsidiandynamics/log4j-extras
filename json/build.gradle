@@ -2,6 +2,7 @@ def packageName = 'log4j-extras-json'
 version = project(':').version
 
 dependencies {
+  compile 'com.google.code.gson:gson:2.8.1'
 }
 
 jar {
