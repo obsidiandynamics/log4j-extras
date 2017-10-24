@@ -5,7 +5,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group = 'com.obsidiandynamics.log4jextras'
-version = '0.2.0-SNAPSHOT'
+version = '0.1.1'
   
 def envUser = 'BINTRAY_USER'
 def envKey = 'BINTRAY_KEY'
@@ -72,8 +72,6 @@ allprojects {
 
 subprojects {
   dependencies {
-    compile project(':')
-    
     testCompile project(':').sourceSets.test.output
   }
 }
