@@ -2,9 +2,9 @@ package com.obsidiandynamics.log4jextras.json;
 
 import static org.junit.Assert.*;
 
+import com.obsidiandynamics.log4jextras.*;
 import org.apache.log4j.*;
 import org.junit.*;
-import com.obsidiandynamics.log4jextras.*;
 
 /**
  *  Adapted from https://github.com/michaeltandy/log4j-json.

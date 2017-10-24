@@ -1,6 +1,6 @@
 Log4J extras
 ===
-[ ![Download](https://api.bintray.com/packages/obsidiandynamics/log4j-extras/log4j-extras-json/images/download.svg) ](https://bintray.com/obsidiandynamics/log4j-extras/log4j-extras-json/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/obsidiandynamics/log4j-extras/log4jextras-json/images/download.svg) ](https://bintray.com/obsidiandynamics/log4j-extras/log4jextras-json/_latestVersion)
 
 Log4J addons/modules comprising:
 
