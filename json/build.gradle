@@ -1,4 +1,4 @@
-def packageName = 'log4j-extras-json'
+def packageName = 'log4jextras-json'
 version = project(':').version
 
 dependencies {

@@ -1,4 +1,4 @@
-def packageName = 'log4j-extras-splunk'
+def packageName = 'log4jextras-splunk'
 version = project(':').version
 
 dependencies {
