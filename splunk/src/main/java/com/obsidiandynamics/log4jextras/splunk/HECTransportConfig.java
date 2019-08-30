@@ -136,8 +136,8 @@ final class HECTransportConfig {
    *  @param rawProperty In format [<integer>|<integer>[KB|MB|GB]].
    */
   void setMaxBatchSizeBytes(String rawProperty) {
-    int multiplier;
-    int factor;
+    long multiplier;
+    long factor;
 
     if (rawProperty.endsWith("KB")) {
       multiplier = KB;
@@ -149,7 +149,7 @@ final class HECTransportConfig {
       return;
     }
     try {
-      factor = Integer.parseInt(rawProperty.substring(0, rawProperty.length() - 2));
+      factor = Long.parseLong(rawProperty.substring(0, rawProperty.length() - 2));
     } catch (NumberFormatException e) {
       return;
     }

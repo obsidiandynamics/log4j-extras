@@ -91,8 +91,8 @@ abstract class SplunkInput {
    *  @param rawProperty In format [<integer>|<integer>[KB|MB|GB]]
    */
   public void setMaxQueueSize(String rawProperty) {
-    int multiplier;
-    int factor;
+    long multiplier;
+    long factor;
 
     if (rawProperty.endsWith("KB")) {
       multiplier = KB;
@@ -104,7 +104,7 @@ abstract class SplunkInput {
       return;
     }
     try {
-      factor = Integer.parseInt(rawProperty.substring(0, rawProperty.length() - 2));
+      factor = Long.parseLong(rawProperty.substring(0, rawProperty.length() - 2));
     } catch (NumberFormatException e) {
       return;
     }

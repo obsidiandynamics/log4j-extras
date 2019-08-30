@@ -50,9 +50,10 @@ public final class SplunkHECAppender extends AppenderSkeleton {
         
         synchronized (this) {
           if (shi == null) {
-            shi = new SplunkHECInput(config);
-            if (maxQueueSize != null) shi.setMaxQueueSize(maxQueueSize);
-            shi.setDropEventsOnQueueFull(dropEventsOnQueueFull);
+            final SplunkHECInput newInput = new SplunkHECInput(config);
+            if (maxQueueSize != null) newInput.setMaxQueueSize(maxQueueSize);
+            newInput.setDropEventsOnQueueFull(dropEventsOnQueueFull);
+            shi = newInput;
           }
         }
       }
